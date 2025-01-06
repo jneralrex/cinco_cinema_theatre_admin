@@ -7,6 +7,7 @@ import DashboardLayout from "./Layout/DashboardLayout";
 import Dashboard from "./Pages/Dashboard";
 import UserMgt from "./Pages/UserMgt";
 import TheatreMgt from "./Pages/TheatreMgt";
+import MovieMgt from "./Pages/MovieMgt";
 
 function App() {
   return (
@@ -21,6 +22,8 @@ function App() {
             <Route path="/dashboard" element={<Dashboard />} />
             <Route path="/user-mgt" element={<UserMgt />} />
             <Route path="/theatre-mgt" element={<TheatreMgt />} />
+            <Route path="/movie-mgt" element={<MovieMgt />} />
+
           </Route>
       <Route path="*" element={<Navigate to="/sign-in" />} />
 
