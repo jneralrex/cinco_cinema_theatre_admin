@@ -1,80 +1,30 @@
-import { useState } from "react";
-
+import React from 'react'
+import { Link, useNavigate } from 'react-router-dom';
+import Logo from '../assets/images/cinco-logo.png'
 const SignIn = () => {
-  const [adminemail, setAdminemail] = useState("");
-  const [password, setPassword] = useState("");
-  const [error, setError] = useState("");
-
-  const adminCredentials = {
-    adminemail: "admin123@gmail.com",
-    password: "admin123",
-  };
-
-  const handleLogin = (e) => {
-    e.preventDefault();
-
-    if (
-      adminemail === adminCredentials.adminemail &&
-      password === adminCredentials.password
-    ) {
-      const adminData = { adminemail, loggedIn: true };
-
-      localStorage.setItem("admin", JSON.stringify(adminData));
-
-      window.location.href = "/";
-    } else {
-      setError("Invalid username or password");
-    }
-  };
-  const adminData = JSON.parse(localStorage.getItem("admin"));
-
-  if (adminData && adminData.loggedIn) {
-    console.log("Admin is logged in:", adminData.username);
-  } else {
-    console.log("No admin is logged in.");
-  }
 
   return (
-    <>
-      <div className="fixed -inset-0 flex items-center justify-center bg-[rgb(165,165,165)] z-50 w-screen">
-        <div className="bg-white w-full max-w-[400px] h-[310px] rounded-xl p-5">
-          <h2 className="font-bold text-xl mb-3">Admin Login</h2>
-          <form onSubmit={handleLogin}>
-            <div className="">
-              <label htmlFor="" className="block text-sm font-medium py-2">
-                Email :{" "}
-              </label>
-              <input
-                type="text"
-                className="p-3 outline-none bg-[#dedede] rounded-md pr-44"
-                placeholder="email"
-                value={adminemail}
-                onChange={(e) => setAdminemail(e.target.value)}
-                required
-              />
-            </div>
-            <div className="">
-              <label htmlFor="" className="block text-sm font-medium py-2">
-                Password :{" "}
-              </label>
-              <input
-                type="password"
-                className="p-3 outline-none bg-[#dedede] rounded-md pr-44"
-                placeholder="Password"
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-                required
-              />
-            </div>
-            {error && <p style={{ color: "red" }}>{error}</p>}
-            <button className="bg-[#40176c] text-white py-2 px-4 rounded-md mt-2 absolute right-[500px]">
-              Login
-            </button>
-          </form>
-        </div>
+    <div>
+      <div className='flex justify-center items-center'>
+        <img src={Logo} alt="" className=''/>
       </div>
-    </>
-  );
-};
+    <div className="p-3 max-w-lg mx-auto">
+    <p className='text-center text-2xl text-gray-500 p-2'>Theatre Admin</p>
+        <form className='flex flex-col gap-4'>
+            <label htmlFor="">
+                <input type="text" name="" id="" className='w-full border rounded-lg p-2' placeholder='name or email'/>
+            </label>
+            <label htmlFor="">
+                Password
+                <input type="password" name="" id="" className='w-full border rounded-lg p-2' placeholder='password'/>
+            </label>
+           <Link to='/dashboard'>
+           <button className='w-full bg-purple-700 rounded-lg p-2 text-white text-lg'>Submit</button>
+           </Link> 
+        </form>
+    </div>
+</div>
+  )
+}
 
-export default SignIn;
+export default SignIn
