@@ -22,8 +22,8 @@ const items = [
     getItem("Users Mgt", "/user-mgt",<LuUsers className="w-4"/>),
     getItem("Theatre Mgt", "/theatre-mgt",<LuTheater className='w-4'/>),
     getItem("Event Mgt", "/event-management", <MdOutlineEvent className="w-4"/>),
-  getItem("Movie Mgt", "/movie-management",<BiCameraMovie className='w-4'/>),
-  getItem("Theatre Admin Mgt", "/theatre-admin",<LuTheater className='w-4'/>),
+  getItem("Movie Mgt", "/movie-mgt",<BiCameraMovie className='w-4'/>),
+  getItem("Profile", "/theatre-admin",<LuTheater className='w-4'/>),
 ];
 const DashboardLayout = () => {
   const [collapsed, setCollapsed] = useState(false);
