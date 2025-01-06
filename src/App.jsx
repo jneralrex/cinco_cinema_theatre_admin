@@ -5,8 +5,8 @@ import {
   Route,
   RouterProvider,
 } from "react-router-dom";
-import SignIn from "./auth/SignIn";
-import SignUp from "./auth/SignUp";
+import SignIn from "./auth/SignIn.jsx";
+import SignUp from "./auth/SignUp.jsx";
 import Nav from "./components/Nav";
 import DashBoard from "./pages/DashBoard";
 import MovieManagement from "./pages/MovieManagement";
