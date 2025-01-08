@@ -5,8 +5,6 @@ import {
   Route,
   RouterProvider,
 } from "react-router-dom";
-import SignUp from "./auth/SignUp.jsx"
-import SignIn from "./auth/SignIn.jsx"
 import Nav from "./components/Nav";
 import DashBoard from "./pages/DashBoard";
 import MovieManagement from "./pages/MovieManagement";
@@ -17,6 +15,8 @@ import Report from "./pages/Report";
 import ClassManagement from "./Pages/ClassManagement.jsx";
 import SeatBlockingManagement from "./Pages/SeatBlockingManagement.jsx";
 import SeatingRowManagement from "./Pages/SeatingRowManagement.jsx";
+import SignIn from "./Auth/SignIn.jsx";
+import SignUp from "./auth/SignUp.jsx";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
