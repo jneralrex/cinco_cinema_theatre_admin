@@ -6,16 +6,16 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import Nav from "./components/Nav";
-import DashBoard from "./pages/DashBoard";
-import MovieManagement from "./pages/MovieManagement";
-import TheatreManagement from "./pages/TheatreManagement";
+import Dashboard from "./pages/Dashboard.jsx";
+import MovieManagement from "./pages/MovieManagement.jsx";
+import TheatreManagement from "./pages/TheatreManagement.jsx";
 import Global from "./components/globalController/Global";
-import GeneralSettings from "./pages/GeneralSettings";
-import Report from "./pages/Report";
-import ClassManagement from "./Pages/ClassManagement.jsx";
-import SeatBlockingManagement from "./Pages/SeatBlockingManagement.jsx";
-import SeatingRowManagement from "./Pages/SeatingRowManagement.jsx";
-import SignIn from "./Auth/SignIn.jsx";
+import GeneralSettings from "./pages/GeneralSettings.jsx";
+import Report from "./pages/Report.jsx";
+import ClassManagement from "./pages/ClassManagement.jsx";
+import SeatBlockingManagement from "./pages/SeatBlockingManagement.jsx";
+import SeatingRowManagement from "./pages/SeatingRowManagement.jsx";
+import SignIn from "./auth/SignIn.jsx";
 import SignUp from "./auth/SignUp.jsx";
 
 const router = createBrowserRouter(
@@ -24,7 +24,7 @@ const router = createBrowserRouter(
       <Route path="/sign-up" element={<SignUp />} />
       <Route path="/sign-in" element={<SignIn />} />
       <Route element={<Nav />}>
-        <Route path="/dashboard" element={<DashBoard />} />
+        <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/class" element={<ClassManagement />} />
         <Route path="/seat-blocking" element={<SeatBlockingManagement />} />
         <Route path="/movie-management" element={<MovieManagement />} />
