@@ -1,6 +1,6 @@
 import React from 'react'
 
-const DashBoard = () => {
+const Dashboard = () => {
   return (
     <div className='max-h-screen grid grid-cols-1 md:grid-cols-3 w-full gap-2 p-3 md:pt-0 pb-16 lg:pb-5'>
         <div className='w-full h-52 m-auto border border-red-100 justify-center flex items-center text-white bg-gray-500 hover:bg-black/80'>
@@ -67,4 +67,4 @@ const DashBoard = () => {
   )
 }
 
-export default DashBoard
+export default Dashboard
