@@ -6,7 +6,6 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import Nav from "./components/Nav";
-import Dashboard from "./pages/Dashboard.jsx";
 import MovieManagement from "./pages/MovieManagement.jsx";
 import TheatreManagement from "./pages/TheatreManagement.jsx";
 import Global from "./components/globalController/Global";
@@ -17,6 +16,7 @@ import SeatBlockingManagement from "./pages/SeatBlockingManagement.jsx";
 import SeatingRowManagement from "./pages/SeatingRowManagement.jsx";
 import SignIn from "./auth/SignIn.jsx";
 import SignUp from "./auth/SignUp.jsx";
+import Dashboard from "./Pages/Dashboard.jsx";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -24,7 +24,7 @@ const router = createBrowserRouter(
       <Route path="/sign-up" element={<SignUp />} />
       <Route path="/sign-in" element={<SignIn />} />
       <Route element={<Nav />}>
-        <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/dashboard" element={<Dashboard/>} />
         <Route path="/class" element={<ClassManagement />} />
         <Route path="/seat-blocking" element={<SeatBlockingManagement />} />
         <Route path="/movie-management" element={<MovieManagement />} />
