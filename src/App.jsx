@@ -5,24 +5,24 @@ import {
   Route,
   RouterProvider,
 } from "react-router-dom";
-import SignIn from "./auth/SignIn";
-import SignUp from "./auth/SignUp";
-import Nav from "./components/Nav";
+import SignIn from "./auth/SignIn.jsx";
+import SignUp from "./auth/SignUp.jsx";
+import Nav from "./components/Nav.jsx";
 
-import MovieManagement from "./pages/MovieManagement";
-import TheatreManagement from "./pages/TheatreManagement";
-import Global from "./components/globalController/Global";
-import Tickets from "./pages/Tickets";
+import MovieManagement from "./pages/MovieManagement.jsx";
+import TheatreManagement from "./pages/TheatreManagement.jsx";
+import Global from "./components/globalController/Global.jsx";
+import Tickets from "./pages/Tickets.jsx";
 
 
-import Report from "./pages/Report";
-import ClassManagement from "./pages/ClassManagement";
-import SeatBlockingManagement from "./pages/SeatBlockingManagement";
-import SeatingRowManagement from "./pages/SeatingRowManagement";
-import VerifyOtp from "./auth/VerifyOtp";
-import ResendOtp from "./auth/ResendOtp";
-import ForgotPassword from "./auth/ForgotPassword";
-import RecoverPassword from "./auth/RecoverPassword";
+import Report from "./pages/Report.jsx";
+import ClassManagement from "./pages/ClassManagement.jsx";
+import SeatBlockingManagement from "./pages/SeatBlockingManagement.jsx";
+import SeatingRowManagement from "./pages/SeatingRowManagement.jsx";
+import VerifyOtp from "./auth/VerifyOtp.jsx";
+import ResendOtp from "./auth/ResendOtp.jsx";
+import ForgotPassword from "./auth/ForgotPassword.jsx";
+import RecoverPassword from "./auth/RecoverPassword.jsx";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
